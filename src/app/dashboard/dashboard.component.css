@@ -1,0 +1,29 @@
+.process-view-container h3{
+    text-transform: uppercase;
+}
+.dashboard-container .process-view-container h3{
+    width: calc( 100% - 85px);
+    word-break: break-all;
+}
+.dashboard-container .process-view-container .ui-btn{
+    background-color: #ccc;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    padding: 2px 10px 5px 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    float: left;
+    width: 60px;
+}
+.dashboard-container .process-view-container .billing .ui-btn,
+.dashboard-container .process-view-container .shipping .ui-btn{
+    display: none;
+}
+.dashboard-container .process-view-container .readonly-informations-head{
+    display: inline-block;
+    width: 100%;
+}
+.address-form textarea{
+    resize: none;
+}

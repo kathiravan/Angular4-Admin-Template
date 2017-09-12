@@ -1,0 +1,104 @@
+<div class="container-fluid">
+    <div class="dashboard-container">
+        <div class="process-bar-container">
+            <div class="process-bar">
+                <div class="process-steps process-order active">
+                    <span class="process-number">1</span><h3>Order information</h3>
+                    <div class="process-infn">
+                        <form class="col-xs-12 address-form" name="address-form" action="#" method="post">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 form-group">
+                                    <label for="name">Name<sup>*</sup>:</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name here" [(ngModel)]="username">
+                                </div>
+                                <div class="col-xs-12 col-sm-6 form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="text" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="col-xs-12 col-sm-6 form-group">
+                                    <label for="pin">Pin Code:</label>
+                                    <input type="text" class="form-control" id="pin" name="pin">
+                                </div>
+                                <div class="col-xs-12 col-sm-6 form-group">
+                                    <label for="locality">Locality:</label>
+                                    <input type="text" class="form-control" id="locality" name="locality">
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 form-group">
+                                    <label for="address">Address:</label>
+                                    <textarea class="form-control" id="address" name="address" rows="3"></textarea>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 form-group">
+                                    <label for="city">City/District/Town:</label>
+                                    <input type="text" class="form-control" id="city" name="city">
+                                </div>
+                                <div class="col-xs-12 col-sm-6 form-group">
+                                    <label for="state">State:</label>
+                                    <input type="text" class="form-control" id="state" name="state">
+                                </div>
+                                <div class="col-xs-12 col-sm-12 form-group">
+                                         <div class="radio">
+                                            <label><input type="radio" name="delivery-home" id="delivery-home">&nbsp;Home (All day)</label>&nbsp;&nbsp;
+                                            <label><input type="radio" name="delivery-work" id="delivery-work">&nbsp;Work (Delivery between 10am - 5pm)</label>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save and Continue</button>
+                            <a href="#" class="cancel">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="process-steps process-shipping">
+                    <span class="process-number">2</span><h3>Shipping information</h3>
+                    <div class="process-infn"></div>
+                </div>
+                <div class="process-steps process-billing">
+                    <span class="process-number">3</span><h3>Billing information</h3>
+                    <div class="process-infn"></div>
+                </div>
+            </div>
+        </div>
+        <div class="process-view-container">
+            <div class="process-view">
+                <h2>Your checkout process</h2>
+                <div class="order active">
+                    <div class="readonly-informations-head">
+                        <span class="collapse">&nbsp;</span>
+                        <h3>Order information</h3>
+                        <a href="javascript: void(0);" class="btn ui-btn">Edit</a>
+                    </div>
+                    <div class="readonly-informations">
+                        <span class="address">
+                            <span>{{ name }}</span>
+                            <span>14 Lakeshore Drive</span>
+                            <span>Pawnee, Indiana, 40078</span>
+                            <span>United States</span>
+                            <span>T: 6540001254</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="shipping next">
+                    <div class="readonly-informations-head">
+                        <span class="collapse">&nbsp;</span>
+                        <h3>Shipping information</h3>
+                        <a href="javascript: void(0);" class="btn ui-btn">Edit</a>
+                    </div>
+                      <div class="readonly-informations">
+                            <span>Pending</span>
+                        </div>
+                    </div>
+                <div class="billing">
+                    <div class="readonly-informations-head">
+                        <span class="collapse">&nbsp;</span><h3>Billing information</h3>
+                        <a href="javascript: void(0);" class="btn ui-btn">Edit</a>
+                    </div>
+                        <div class="readonly-informations">
+                            <span>Pending</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div> <!-- end of dashboard container -->
+</div>
+<!-- /.conainer-fluid -->
