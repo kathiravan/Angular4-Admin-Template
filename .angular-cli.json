@@ -31,7 +31,9 @@
         "assets/js/vendors/popper.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "assets/js/vendors/pace.js",
-        "assets/js/app.js"
+        "assets/js/app.js",
+        "assets/js/no-conflict.js",
+        "assets/js/custom.js"
        ],
       "environmentSource": "environments/environment.ts",
       "environments": {
