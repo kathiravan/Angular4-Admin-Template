@@ -1,70 +1,11 @@
 <div class="container-fluid">
     <div class="dashboard-container">
-        <div class="process-bar-container">
-            <div class="process-bar">
-                <div class="process-steps process-order active">
-                    <span class="process-number">1</span><h3>Order information</h3>
-                    <div class="process-infn">
-                        <form class="col-xs-12 address-form" name="address-form" action="#" method="post">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 form-group">
-                                    <label for="name">Name<sup>*</sup>:</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name here" [(ngModel)]="username">
-                                </div>
-                                <div class="col-xs-12 col-sm-6 form-group">
-                                    <label for="phone">Phone:</label>
-                                    <input type="text" class="form-control" id="phone" name="phone">
-                                </div>
-                                <div class="col-xs-12 col-sm-6 form-group">
-                                    <label for="pin">Pin Code:</label>
-                                    <input type="text" class="form-control" id="pin" name="pin">
-                                </div>
-                                <div class="col-xs-12 col-sm-6 form-group">
-                                    <label for="locality">Locality:</label>
-                                    <input type="text" class="form-control" id="locality" name="locality">
-                                </div>
-
-                                <div class="col-xs-12 col-sm-12 form-group">
-                                    <label for="address">Address:</label>
-                                    <textarea class="form-control" id="address" name="address" rows="3"></textarea>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 form-group">
-                                    <label for="city">City/District/Town:</label>
-                                    <input type="text" class="form-control" id="city" name="city">
-                                </div>
-                                <div class="col-xs-12 col-sm-6 form-group">
-                                    <label for="state">State:</label>
-                                    <input type="text" class="form-control" id="state" name="state">
-                                </div>
-                                <div class="col-xs-12 col-sm-12 form-group">
-                                         <div class="radio">
-                                            <label><input type="radio" name="delivery-home" id="delivery-home">&nbsp;Home (All day)</label>&nbsp;&nbsp;
-                                            <label><input type="radio" name="delivery-work" id="delivery-work">&nbsp;Work (Delivery between 10am - 5pm)</label>
-                                        </div>
-                                    
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Save and Continue</button>
-                            <a href="#" class="cancel">Cancel</a>
-                        </form>
-                    </div>
-                </div>
-                <div class="process-steps process-shipping">
-                    <span class="process-number">2</span><h3>Shipping information</h3>
-                    <div class="process-infn"></div>
-                </div>
-                <div class="process-steps process-billing">
-                    <span class="process-number">3</span><h3>Billing information</h3>
-                    <div class="process-infn"></div>
-                </div>
-            </div>
-        </div>
-        <div class="process-view-container">
+       <div class="process-view-container">
             <div class="process-view">
-                <h2>Your checkout process</h2>
+                <h2>Your Summary Order</h2>
                 <div class="order active">
                     <div class="readonly-informations-head">
-                        <span class="collapse">&nbsp;</span>
+                        <span class="bullets">&nbsp;</span>
                         <h3>Order information</h3>
                         <a href="javascript: void(0);" class="btn ui-btn">Edit</a>
                     </div>
@@ -80,7 +21,7 @@
                 </div>
                 <div class="shipping next">
                     <div class="readonly-informations-head">
-                        <span class="collapse">&nbsp;</span>
+                        <span class="bullets">&nbsp;</span>
                         <h3>Shipping information</h3>
                         <a href="javascript: void(0);" class="btn ui-btn">Edit</a>
                     </div>
@@ -90,7 +31,7 @@
                     </div>
                 <div class="billing">
                     <div class="readonly-informations-head">
-                        <span class="collapse">&nbsp;</span><h3>Billing information</h3>
+                        <span class="bullets">&nbsp;</span><h3>Billing information</h3>
                         <a href="javascript: void(0);" class="btn ui-btn">Edit</a>
                     </div>
                         <div class="readonly-informations">
@@ -99,6 +40,181 @@
                     </div>
             </div>
         </div>
+        <div class="process-bar-container">
+            <div class="panel-group process-bar" id="accordion">
+                <div class="panel panel-default process-order active">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <span class="process-number">1</span><a data-toggle="collapse" data-parent="#accordion" href="#order-collapse">Order information <span class="toggle">More</span></a>
+                        </h4>
+                    </div>
+                    <div id="order-collapse" class="panel-collapse collapse in show">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 pull-left">
+                                    <span class="block"><strong>Ship To:</strong></span>
+                                    <span class="block">Kelly (Demo)</span>
+                                    <span class="block">
+                                        City Center Plaza 516 Main St.,<br />
+                                        San Francisco Bay Area, CA, 25200<br />
+                                        United States
+                                    </span>
+                                    <a href="#" class="edit">edit</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 pull-left">
+                                    <span class="block"><strong>Bill To:</strong></span>
+                                    <span class="block">Kelly (Demo)</span>
+                                    <span class="block">
+                                        City Center Plaza 516 Main St.,<br />
+                                        San Francisco Bay Area, CA, 25200<br />
+                                        United States
+                                    </span>
+                                    <a href="#" class="edit">edit</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 pull-left">
+                                    <span class="block"><strong>Order Date</strong>: 13-09-2017</span>
+                                    <span class="block"><strong>Contact No</strong>: (202)-555-0157</span>
+                                    <span class="block"><strong>Email</strong>: kelly.smith@example.com</span>
+                                    <span class="block"><strong>Currency</strong>: USD</span>
+                                    <span class="block"><strong>Payment Method</strong>: Cash</span>
+                                    <span class="block"><strong>Sales Person</strong>: N/A</span>
+                                    <span class="block"><strong>Warehouse Name</strong>: Cusdelight</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default process-shipping">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <span class="process-number">2</span><a data-toggle="collapse" data-parent="#accordion" href="#ship-collapse">Shipping information <span class="toggle">More</span></a>
+                        </h4>
+                    </div>
+                    <div id="ship-collapse" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <form class="shippingForm" name="shippingForm" id="shippingForm">
+                                <div class="form-group">
+                                    <label for="shipFrom">Ship From <sup>*</sup>:</label>
+                                    <select class="selectpicker" required>
+                                        <option>Option1</option>
+                                        <option>Option2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="shipDate">Ship Date:</label>
+                                    <input type="date" name="shipDate" class="shipDate" id="shipDate"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="shipVia">Ship Via:</label>
+                                    <div class="btn-group">
+                                        <a class="btn btn-default" href="#">Carrier</a>
+                                        <a class="btn btn-default" href="#">Manually</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="preset">Preset:</label>
+                                    <select class="selectpicker">
+                                        <option>Option1</option>
+                                        <option>Option2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="carrier">Carrier <sup>*</sup>:</label>
+                                    <select class="selectpicker" required>
+                                        <option>Option1</option>
+                                        <option>Option2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="weight">Weight <sup>*</sup>:</label>
+                                    <input type="text" name="weight" id="weight" class="weight"/>
+                                    <select class="selectpicker" required>
+                                        <option>Option1</option>
+                                        <option>Option2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="package">Package <sup>*</sup>:</label>
+                                    <select class="selectpicker" required>
+                                        <option>Option1</option>
+                                        <option>Option2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="insurance">Insurance:</label>
+                                    <div class="btn-group">
+                                        <a class="btn btn-default" href="#">yes</a>
+                                        <a class="btn btn-default" href="#">no</a>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default process-product">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <span class="process-number">3</span><a data-toggle="collapse" data-parent="#accordion" href="#product-collapse">Order information <span class="toggle">More</span></a>
+                        </h4>
+                    </div>
+                    <div id="product-collapse" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="row">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td width="35px">&nbsp;</td>
+                                            <td width="50px">Image</td>
+                                            <td width="300px">Product</td>
+                                            <td width="100px">On the hand stock</td>
+                                            <td width="100px">Left in stock</td>
+                                            <td width="50px">Qty</td>
+                                            <td width="80px">Ship Qty</td>
+                                            <td width="50px">Price</td>
+                                            <td width="50px">Discount</td>
+                                            <td width="50px">Tax</td>
+                                            <td width="120px">Subtotal(USD)</td>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td><input type="checkbox" name="" class="" id="" /></td>
+                                        <td><img src=".." alt="" title="" /></td>
+                                        <td>
+                                            <span>Crocs Unisex Clogs (Demo)-Black-L</span>
+                                            <span><strong>SKU:</strong>DEMOPERS005-Black-L</span>
+                                        </td>
+                                        <td>110</td>
+                                        <td>109</td>
+                                        <td>1</td>
+                                        <td>
+                                            <input type="text" name="quantity" class="quantity" id="quantity" value="1" />
+                                        </td>
+                                        <td>15.00</td>
+                                        <td>0.00</td>
+                                        <td>0.00</td>
+                                        <td>15.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td colspan="2" class="text-right text-bold">Total (USD):</td>
+                                        <td class="text-left text-bold">15.00</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div> <!-- end of dashboard container -->
 </div>
 <!-- /.conainer-fluid -->
